@@ -1,0 +1,134 @@
+@import '../../../../assets/global/globalStyle.less';
+// 投诚-铜
+.Tong{
+  width: 100%;
+  // 标题
+  .cb_titi1{
+    height: 46px;
+    line-height: 46px;
+    padding-left: 17px;
+    margin-bottom: 12px;
+    background: #f1f7fd;
+    border-radius: 5px;
+    -webkit-border-radius :5px; //chrome.safari
+    -moz-border-radius :5px;  //firefox
+    -o-border-radius :5px; //opera
+    -ms-border-radius :5px; //ie
+  }
+  // 期间选择
+  .bs{
+    background: #f5f5f7;
+    margin: 0 17px 20px 17px;
+    padding: 15px 0 10px 20px;
+    .el-input__inner{
+      width: 115px;
+      height:35px;
+    }
+    .el-button{
+      padding: 0;
+      font-size: 13px;
+      color:#fff;
+      text-align:center;
+      height: 30px;
+      line-height: 30px;
+      margin-left: 20px;
+    }
+    .bs_search{width: 60px;}
+    .bs_sall{width: 100px;}
+  }
+  // 基本信息
+  .ct_con_jiben{
+    width: 100%;
+    padding-bottom: 56px;
+    margin-top:10px;
+    box-shadow: 1px 1px 5px 5px #ececec;
+    -webkit-box-shadow: 1px 1px 5px 5px #ececec;//chrome.safari
+    -moz-box-shadow: 1px 1px 5px 5px #ececec; //firefox
+    -o-box-shadow: 1px 1px 5px 5px #ececec; //opera
+    -ms-box-shadow: 1px 1px 5px 5px #ececec; //ie
+    border-radius: 5px;
+    -webkit-border-radius :5px; //chrome.safari
+    -moz-border-radius :5px;  //firefox
+    -o-border-radius :5px; //opera
+    -ms-border-radius :5px; //ie
+    .ct_con_content{
+      display:flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content:flex-start;
+      align-items:flex-start;
+      padding:0 17px;
+      .ct_con_left,.ct_con_right{
+        ul {
+            li{
+            list-style:none;
+            width: 100%;
+            height: 34px;
+            text-align: center;
+            line-height:34px;
+            border-left: 1px solid #cee7ff;
+            border-bottom: 1px solid #cee7ff;
+            font-size:11px;
+            color:#000;;
+          }
+          .ct_con_li1{
+            background:#72afff;
+            border:1px solid #72afff;
+            border-right: 1px solid #cee7ff;
+            color:#fff;
+          }
+        }
+      }
+      .ct_con_left{width: 170px;}
+      .ct_con_right{
+        width:100%;
+        overflow-x: auto;
+        display:flex;
+        flex-flow: row nowrap;
+        justify-content:flex-start;
+        align-items: flex-start;
+        ul{
+          &:last-child{border-right: 1px solid #cee7ff; }
+          li{width: 235px;}
+        }
+      }
+    }
+  }
+// 行业信息
+  .ct_con_hangye{
+    width: 100%;
+    padding-bottom:56px;
+    margin-top: 10px;
+    box-shadow: 1px 1px 5px 5px #ececec;
+    -webkit-box-shadow: 1px 1px 5px 5px #ececec;//chrome.safari
+    -moz-box-shadow: 1px 1px 5px 5px #ececec; //firefox
+    -o-box-shadow: 1px 1px 5px 5px #ececec; //opera
+    -ms-box-shadow: 1px 1px 5px 5px #ececec; //ie
+    border-radius: 5px;
+    -webkit-border-radius :5px; //chrome.safari
+    -moz-border-radius :5px;  //firefox
+    -o-border-radius :5px; //opera
+    -ms-border-radius :5px; //ie
+    .ct_con_content2{
+        padding:17px;
+        table {
+          th.is-leaf{
+          text-align:center;
+          vertical-align: middle;
+          background:#72afff;
+          color:#fff;
+          }
+          td{
+            text-align:center;
+            vertical-align: middle;
+          }
+        }
+        .el-table .sort-caret.ascending{
+          border-bottom-color:#fff;
+        }
+        .el-table .sort-caret.descending{
+          border-top-color:#fff;
+        }
+    }
+  }
+}

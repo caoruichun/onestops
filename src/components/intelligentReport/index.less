@@ -1,0 +1,275 @@
+@import '../../assets/global/globalStyle.less';
+.intelligentReport {
+	.anchorList {
+		position: fixed;
+		z-index: 1000000;
+		transition: all 0.5s;
+		-webkit-transition: all 0.5s;
+		-moz-transition: all 0.5s;
+		-ms-transition: all 0.5s;
+		-o-transition: all 0.5s;
+		transform-origin: right top;
+		-webkit-transform-origin: right top;
+		-moz-transform-origin: right top;
+		-ms-transform-origin: right top;
+		-o-transform-origin: right top;
+		&.anchorOut {
+			top: 7rem;
+			right: 2rem;
+			line-height: 2rem;
+			padding: 1rem 2rem;
+			border-radius: 5rem;
+			background-color: rgba(227,231,236,0.8);
+			.fa-caret-right {
+				position: absolute;
+				left: 2%;
+				top: 40%;
+				cursor: pointer;
+				font-size: 1.5em;
+				color: @primary-color;
+			}
+			p {
+				margin: 0;
+				padding: 0;
+				cursor: pointer;
+				.fa-circle {
+					color: @waring-color;
+					margin-right: 0.5rem;
+				}
+				&.anchorTrue {
+					font-weight: 600;
+					.fa-circle {
+						opacity: 1;
+					}
+				}
+				&.anchorFalse {
+					font-weight: 500;
+					.fa-circle {
+						opacity: 0;
+					}
+				}
+			}			
+		}
+		&.anchorIn {
+			top: 7rem;
+			right: 1rem;
+			width: 2rem;
+			height: 2rem;
+			border-radius: 50%;
+			background-color: rgba(227,231,236,0.9);
+			.fa-caret-right {
+				position: absolute;
+				left: 20%;
+				top: 2%;
+				font-size: 2em;
+				cursor: pointer;
+				color: @primary-color;
+				transform: rotateY(180deg);
+				-webkit-transform: rotateY(180deg);
+				-moz-transform: rotateY(180deg);
+				-ms-transform: rotateY(180deg);
+				-o-transform: rotateY(180deg);
+			}
+			p {
+				display: none;
+			}
+		}
+	}
+	.el-card {
+		&:nth-child(even) {
+			margin: 1rem 0;
+			.el-card__body {
+				padding-top: 0;
+			}
+		}
+		.el-card__header {
+			font-size: 16px;
+			font-weight: 500;
+			padding: 1rem 1rem 0.5rem 1rem;
+			background: @light_blue;
+		}
+		.el-card__body {
+			.el-table__header-wrapper {
+				thead {
+					tr {
+						th {
+							.table_head;
+						}	
+					}
+				}		
+			}
+			.el-table__body-wrapper {
+				.scroll-style;
+				td {
+					padding: 0;
+					color: @grayScale-color_1;
+					.cell {
+						padding: 0.5rem 1rem;
+						vertical-align: middle;
+					}
+					&:nth-child(1) {
+						cursor: pointer;
+					}
+				}
+				.el-table__empty-block {
+					display: none;
+				}
+			}
+			.el-tabs {
+				.el-tabs__header {
+					.el-tabs__item {
+						font-size: 16px;
+						font-weight: 500;
+						text-align: center;
+						color: @grayScale-color_3;
+						&.is-active {
+							font-weight: 500;
+							color: @grayScale-color_1;
+						}
+					}
+					.el-tabs__active-bar.is-top {
+						background: @waring-color;
+					}				
+				}
+				.el-tabs__content {
+					width: 100%;
+				}			
+			}
+			#outputReportHTML {
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: -1;
+			}
+			.tempNemsList {
+				padding: 0;
+				margin: 1rem 0;
+				font-size: 14px;
+				line-height:30px;
+				border-bottom: 1px solid #e4e7ed;
+				.el-tabs {
+					width: 80%;
+					display: inline-block;
+					vertical-align: bottom;
+					.el-tabs__header {
+						margin: 0;
+						padding: 0;
+						border-bottom: none;
+						.el-tabs__new-tab {
+							display: none;
+						}
+						.el-tabs__nav-wrap {
+							margin: 0;
+							.el-tabs__nav-prev,.el-tabs__nav-next {
+								height: 30px;
+								line-height: 30px;
+							}
+							.el-tabs__nav-scroll {
+								.el-tabs__nav {
+									.el-tabs__item {
+										height: 30px;
+										font-size: 14px;									
+										line-height: 30px;
+										color: @grayScale-color_1;
+										&.is-active {
+											color: @primary-color;
+										}
+									}
+								}
+							}
+						}
+					}
+					.el-tabs__content {
+						display: none;
+					}
+				}
+				.el-button {
+					float: right;
+					margin: 0 0 0.2rem 0;
+				}
+			}
+			.el-button {
+				width: 8rem;
+				font-size: 13px;
+				margin: 0 1rem 0 0;
+				padding: 0.5rem 1rem;
+			}
+			.upload-demo {
+				cursor: pointer;
+				position: relative;
+				margin-bottom: 0.5rem;
+				display: inline-block;
+				.el-upload-list {
+					display: none;
+				}
+				input {
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					width: 100%;
+					z-index: -1;
+				}
+			}
+		}
+		.defaultReportTemp {
+ 			position: fixed;
+			top: 0;
+			left: 0; 
+			z-index: -1; 
+			background: #fff;
+		}
+	}
+	.el-dialog__wrapper {
+		z-index: 10000000 !important;
+		background: rgba(0,0,0,0.7);
+		&.showPDFDialog {
+			.el-dialog {
+				margin-bottom: 0;
+				.el-dialog__header {
+					display: none;
+				}
+				.el-dialog__body {
+					padding: 0;
+					.pdfEmbed_outer {
+						#pdfEmbed {
+							display: block;
+							width: 100%;
+							height: 98%;
+							.scroll-style;
+						}
+						.pdfEmbed_control {
+							height: 8%;
+							width: 100%;
+							background: #fff;
+							border-radius: 0;
+							text-align: right;
+							padding: 0.5rem 1rem;
+							letter-spacing: 0.5rem;
+							h5 {
+								margin: 0;
+								float: left;
+								padding: 0.5rem 1rem;
+								display: inline-block;
+								letter-spacing: 0.1rem;
+							}
+							.fa {
+								cursor: pointer;
+							}
+						}						
+					}
+				}			
+			}
+		}
+		.el-dialog__body {
+			padding: 0 20px;
+		}
+		.el-dialog__footer {
+			.dialog-footer {
+				.el-button {
+					float: none;
+				}
+			}				
+		}
+	}
+}

@@ -1,0 +1,88 @@
+@import '../../../assets/global/globalStyle.less';
+.touRongzi {
+  // 期间选择
+  .bs{
+    background: #f5f5f7;
+    margin: 0 17px 20px 17px;
+    padding: 15px 0 10px 20px;
+    .el-input__inner{
+      width: 115px;
+      height:35px;
+    }
+    .el-button{
+      padding: 0;
+      font-size: 13px;
+      color:#fff;
+      text-align:center;
+      height: 30px;
+      line-height: 30px;
+      margin-left: 20px;
+    }
+    .bs_search{width: 60px;}
+    .bs_sall{width: 100px;}
+  }
+  // 投资
+  .touzi,.rongzi{
+    box-shadow: 1px 1px 5px 5px #ececec;
+    -webkit-box-shadow: 1px 1px 5px 5px #ececec;//chrome.safari
+    -moz-box-shadow: 1px 1px 5px 5px #ececec; //firefox
+    -o-box-shadow: 1px 1px 5px 5px #ececec; //opera
+    -ms-box-shadow: 1px 1px 5px 5px #ececec; //ie
+    border-radius: 5px;
+    -webkit-border-radius :5px; //chrome.safari
+    -moz-border-radius :5px;  //firefox
+    -o-border-radius :5px; //opera
+    -ms-border-radius :5px; //ie
+    padding-bottom: 28px;
+    .touzi_tit{
+      height: 46px;
+      font-size: 14px;
+      color: #030303;
+      background: #f1f7fd;
+      padding-left: 17px;
+      line-height: 46px;
+    }
+    .tz_seledate{
+      height:60px;
+      line-height: 60px;
+      color:#000;
+      padding-left:20px;
+      margin:12px 17px 10px 17px;
+      background: #f5f5f7;
+    }
+    .touziData,.rongzi_content{
+      padding:0 17px;
+      .el-table{
+        .cell{
+          text-align: center;
+          line-height: 35px;
+          height: 35px;
+        }
+        th{
+          background:  #72afff;
+          height: 54px;
+          line-height: 54px;
+          color: #fff;
+        }
+        td,th{padding: 0;}
+        .el-table__body-wrapper is-scrolling-none{
+          .el-table__empty-block {
+            display: none;
+          }
+        }
+    }
+  }
+}
+  .rongzi{
+    margin-top: 10px;
+    el-menu--horizontal>.el-menu-item.is-active{
+      border-bottom:2px solid #f98508;
+    }
+    .rongzi_tit{
+      margin: 17px 17px 10px 17px;
+    }
+    .hidden{
+      display:none;
+    }
+  }
+}

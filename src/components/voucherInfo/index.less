@@ -1,0 +1,285 @@
+@import '../../assets/global/globalStyle.less';
+.valuationTransaction {
+  .el-table__header-wrapper{
+    font-size: 14px;
+    th{
+      padding: 0;
+      line-height: 40px;
+      font-weight: 500;
+    }
+  }
+  .el-table__body-wrapper{
+    font-size: 14px;
+    td{
+      padding: 0;
+      line-height: 40px;
+    }
+  }
+  .voucherFrame{
+    background-color: #ffffff;
+    box-shadow: 0px 3px 12px 0px
+    rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+    margin-bottom: 1.25rem;
+    .divh{
+      margin: 0;
+      background-color: #f1f7fd;
+      padding: 11px 10px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      font-size: 16px;
+    }
+    .frameContent{
+      padding: 10px 8px 16px;
+      .contentSelect{
+        background-color: #f5f5f7;
+        padding: 1rem;
+        border-radius: 4px;
+        .tit{
+          margin-right: 10px;
+        }
+        .el-select{
+          width: 21.83rem;
+        }
+      }
+    }
+    //基本信息
+    .bisc-tit{
+      border-left:2px solid #f8b62a;
+      margin: 0;
+      padding-left: 10px;
+      font-size: 14px;
+    }
+    .frameContent-bisc{
+      padding: 1.52rem 0.83rem;
+      .bisc-btn{
+        text-align: right;
+        margin-bottom: 10px;
+        .btn-green{
+          background-color: #f0f0f0;
+          border-color: #f0f0f0;
+          color: #000;
+        }
+        .btn-green:hover{
+          background-color: #f0f0f0;
+          border-color: #f0f0f0;
+            color: #000;
+        }
+      }
+      .box-card{
+        padding: 1.17rem;
+        height: 19rem;
+        height: 19rem\0;
+        -moz-height: 19rem;
+        box-shadow: 0 3px 8px 0 rgba(14,19,26,0.22);
+        .atheover{
+          overflow-y: auto;
+          height: 48px;
+        }
+        .iconStree{
+          border-left: 1px solid #ccc;
+          margin-left: 10px;
+          padding-left: 10px;
+        }
+        .el-card__body{
+          padding: 0;
+        }
+      }
+      .card-btn{
+        margin: 0.58rem 0;
+        .fuxi{
+          background-color: @grayScale-color_2;
+          border-color: @grayScale-color_2;
+          color: #fff;
+          box-shadow: 0 3px 8px 0 rgba(14, 19, 26, 1);
+        }
+        .yichang{
+          background-color: #b2d900;
+          border-color: #b2d900;
+          color: #fff;
+
+        }
+        .baojia{
+          background-color: @grayScale-color_2;
+          border-color: @grayScale-color_2;
+          color: #fff;
+          box-shadow: 0 3px 8px 0 rgba(14, 19, 26, 1);
+          margin-left: 20px;
+        }
+      }
+      .card-font{
+        color:#3f8ad4 ;
+        letter-spacing: 1px;
+        font-size: 2rem;
+      }
+      .money-table{
+        margin-top: 10px;
+        text-align: center;
+        th{
+          text-align: center;
+          color: #fff;
+          background-color: #66DDBD;
+        }
+      }
+    }
+    .tablepre{
+      .el-table__header{
+        width: 100% !important;
+      }
+      .el-table__body{
+        width: 100% !important;
+      }
+    }
+    .tablethree{
+      .el-table__empty-block{
+        display: none;
+      }
+      th{
+        text-align: center;
+        color: #fff;
+        background-color: #66DDBD;
+      }
+    }
+    .tablethr-two{
+      th{
+        text-align: center;
+        color: #fff;
+        background-color: #409EFF;
+      }
+    }
+  }
+  .baseinfo-boxone{
+    display: flex;
+    div.flex-div{
+      background: #FFFFFF;
+      box-shadow: 0 3px 8px 0 rgba(14,19,26,0.22);
+      border-radius: 4px;
+    }
+    div.baseinfo-box-table{
+      flex: 2;
+      display: flex;
+      box-shadow: 0 3px 8px 0 rgba(14, 19, 26, 0.22);
+      ul{
+        flex: 1;
+        list-style: none;
+        li{
+          display: flex;
+          margin: 0px 0px -1px -1px ;
+          z-index: 0;
+          p{
+            flex:1;
+            display: flex;
+            display: block\0;
+            border: 1px solid #ebeef5;
+            padding: 8px;
+            font-size: 14px;
+            color: #000;
+            background: #fff;
+            margin: 0px 0px -1px -1px ;
+            z-index: 0;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            word-wrap: break-word;
+          }
+          p.title{
+            display: flex;
+            align-items: center;
+            background: #72afff;
+            color: #fff;
+
+          }
+        }
+      }
+    }
+  }
+
+  //锚点
+  .anchorList {
+		position: fixed;
+		z-index: 1000;
+		transition: all 0.5s;
+		-webkit-transition: all 0.5s;
+		-moz-transition: all 0.5s;
+		-ms-transition: all 0.5s;
+		-o-transition: all 0.5s;
+		transform-origin: right top;
+		-webkit-transform-origin: right top;
+		-moz-transform-origin: right top;
+		-ms-transform-origin: right top;
+		-o-transform-origin: right top;
+		&.anchorOut {
+			top: 7rem;
+			right: 2rem;
+			line-height: 2rem;
+			padding: 1rem 2rem;
+			border-radius: 5rem;
+			background-color: rgba(227,231,236,0.8);
+			.fa-caret-right {
+				position: absolute;
+				left: 2%;
+				top: 40%;
+				cursor: pointer;
+				font-size: 1.5em;
+				color: @primary-color;
+			}
+			p {
+				margin: 0;
+				padding: 0;
+				cursor: pointer;
+				.fa-circle {
+					color: @waring-color;
+					margin-right: 0.5rem;
+				}
+				&.anchorTrue {
+					font-weight: 600;
+					.fa-circle {
+						opacity: 1;
+					}
+				}
+				&.anchorFalse {
+					font-weight: 500;
+					.fa-circle {
+						opacity: 0;
+					}
+				}
+			}
+		}
+		&.anchorIn {
+			top: 7rem;
+			right: 1rem;
+			width: 2rem;
+			height: 2rem;
+			border-radius: 50%;
+			background-color: rgba(227,231,236,0.9);
+			.fa-caret-right {
+				position: absolute;
+				left: 20%;
+				top: 2%;
+				font-size: 2em;
+				cursor: pointer;
+				color: @primary-color;
+				transform: rotateY(180deg);
+				-webkit-transform: rotateY(180deg);
+				-moz-transform: rotateY(180deg);
+				-ms-transform: rotateY(180deg);
+				-o-transform: rotateY(180deg);
+			}
+			p {
+				display: none;
+			}
+		}
+	}
+}
+.el-table .cell{line-height: 40px !important}
+.el-table__empty-block{display: none;}
+ *::-webkit-scrollbar{
+      width: 0.5rem;
+      height: 0.5rem;
+      background: none;
+ }
+ *::-webkit-scrollbar-thumb{
+    border-radius: 1rem;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+ }

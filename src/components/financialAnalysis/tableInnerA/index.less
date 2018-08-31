@@ -1,0 +1,44 @@
+@import '../../../assets/global/globalStyle.less';
+.tableListA {
+	.tableStyle {
+		.el-table__fixed-header-wrapper,.el-table__header-wrapper {
+			height: 100%;
+			th {
+				.table_head;
+			}
+		}
+		.el-table__fixed-body-wrapper,.el-table__body-wrapper {
+			.scroll-style;
+			td {
+				padding: 0;
+				color: @grayScale-color_1;
+				.cell {
+					line-height: 40px;
+					border-bottom: 0;
+				}
+			}
+			.el-table__empty-block {
+				display: none;
+			}
+		}		
+	}
+	.el-table {
+		.tableStyle;
+	}
+	.el-table__fixed {
+		bottom: 1rem !important;
+		&::before {
+			background: none;
+		}
+		.el-table__fixed-body-wrapper {
+			.el-table__body {
+				tbody::after {
+					content: '';
+					display: block;
+					height: 1rem;
+				}
+			}
+		}
+		.tableStyle;
+	}
+}
